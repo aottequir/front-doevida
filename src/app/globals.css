@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz,wght@8..144,300..900&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cores e fontes do DOE + VIDA */
+:root {
+  --background: #FFFFFF;
+  --foreground: #1E1E1E;
+  --brand-pink: #FFE7F6;
+  --brand-red: #CF0000;
+
+  --font-roboto-serif: 'Roboto Serif', Georgia, serif;
+  --font-roboto-sans: 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--foreground);
+  background-color: #FAF7F9;
+  font-family: var(--font-roboto-sans);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-serif {
+  font-family: var(--font-roboto-serif);
+}
+
+/* Barra de rolagem */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFE7F6;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CF0000;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A60000;
+}
+
+/* Campos de formulário */
+.input-pill {
+  display: block;
+  width: 100%;
+  padding: 0.875rem 1.25rem;
+  color: #262626;
+  background-color: #FFFFFF;
+  border: 1px solid #D4D4D4;
+  border-radius: 9999px;
+  font-family: var(--font-roboto-sans);
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 2px rgb(0 0 0 / 5%);
+}
+
+.input-pill::placeholder {
+  color: #A3A3A3;
+}
+
+.input-pill:focus {
+  outline: none;
+  border-color: #CF0000;
+  box-shadow: 0 0 0 3px rgb(207 0 0 / 12%);
+}
+
+/* Botão principal */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.5rem;
+  color: #FFFFFF;
+  background-color: #CF0000;
+  border: none;
+  border-radius: 9999px;
+  font-family: var(--font-roboto-serif);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgb(207 0 0 / 15%);
+}
+
+.btn-primary:hover {
+  background-color: #A60000;
+  box-shadow: 0 6px 16px rgb(207 0 0 / 20%);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid #CF0000;
+  outline-offset: 3px;
+}
+
+/* Botão secundário */
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.875rem 1.5rem;
+  color: #CF0000;
+  background-color: #FFFFFF;
+  border: 1px solid #CF0000;
+  border-radius: 9999px;
+  font-family: var(--font-roboto-serif);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #FFE7F6;
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid rgb(207 0 0 / 30%);
+  outline-offset: 3px;
+}
+
+/* Cartões */
+.card-soft {
+  padding: 1.5rem;
+  background-color: #FFFFFF;
+  border: 1px solid #F5F5F5;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgb(0 0 0 / 5%);
+}
+
+.card-pink {
+  padding: 1.5rem;
+  background-color: #FFE7F6;
+  border: 1px solid #FBCFE8;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgb(190 24 93 / 8%);
+}
+
+@media (min-width: 768px) {
+
+  .card-soft,
+  .card-pink {
+    padding: 2rem;
+  }
+
+  .input-pill {
+    font-size: 1rem;
+  }
+}
